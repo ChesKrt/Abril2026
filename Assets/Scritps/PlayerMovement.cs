@@ -21,6 +21,19 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
+        if (Keyboard.current != null)
+        {
+            MoveAndJump();
+        }
+
+        if (Gamepad.current != null)
+        {
+            MoveAndJumpGamepad();
+        }
+    }
+
+    private void MoveAndJump()
+    {
         Vector3 moveDir = Vector3.forward * _speed;
 
         _isGrounded = _cc.isGrounded;
@@ -31,6 +44,29 @@ public class PlayerMovement : MonoBehaviour
         }
 
         if (_isGrounded == true && Keyboard.current.spaceKey.wasPressedThisFrame)
+        {
+            _veticalVelocity = Mathf.Sqrt(_jumpHeight * -2f * _gravity);
+        }
+
+        moveDir.y = _veticalVelocity;
+
+        _veticalVelocity += _gravity * Time.deltaTime;
+
+        _cc.Move(moveDir * Time.deltaTime);
+    }
+
+    private void MoveAndJumpGamepad()
+    {
+        Vector3 moveDir = Vector3.forward * _speed;
+
+        _isGrounded = _cc.isGrounded;
+
+        if (_isGrounded == true)
+        {
+            _veticalVelocity = -2f;
+        }
+
+        if (_isGrounded == true && Gamepad.current.buttonSouth.wasPressedThisFrame)
         {
             _veticalVelocity = Mathf.Sqrt(_jumpHeight * -2f * _gravity);
         }

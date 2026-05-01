@@ -412,6 +412,7 @@ GameObject:
   - component: {fileID: 731373770}
   - component: {fileID: 731373773}
   - component: {fileID: 731373768}
+  - component: {fileID: 731373774}
   m_Layer: 0
   m_Name: Cube
   m_TagString: Untagged
@@ -426,7 +427,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 731373767}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: cd82c0e18c5cded4b988292959e8982a, type: 3}
   m_Name: 
@@ -458,7 +459,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: a849dd0c20715124a92bc97e6f987c04, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -530,6 +531,24 @@ CharacterController:
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &731373774
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 731373767}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 66048f245d7d8fe43aa6fbcd6a81b8e2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ColorChange
+  colors:
+  - {r: 1, g: 0, b: 0, a: 1}
+  - {r: 0, g: 0.2124443, b: 1, a: 1}
+  material: {fileID: 2100000, guid: a849dd0c20715124a92bc97e6f987c04, type: 2}
+  isInvisible: 0
+  maxTime: 3
 --- !u!1 &832575517
 GameObject:
   m_ObjectHideFlags: 0
@@ -597,7 +616,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!65 &892888819
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -804,6 +823,63 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &2128351744
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2116151030973917041, guid: c6fbeaece5fecef4c8abed4c7957e16e, type: 3}
+      propertyPath: m_Name
+      value: Obstacle
+      objectReference: {fileID: 0}
+    - target: {fileID: 6625712810146728246, guid: c6fbeaece5fecef4c8abed4c7957e16e, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.41
+      objectReference: {fileID: 0}
+    - target: {fileID: 6625712810146728246, guid: c6fbeaece5fecef4c8abed4c7957e16e, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 6625712810146728246, guid: c6fbeaece5fecef4c8abed4c7957e16e, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 9.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 6625712810146728246, guid: c6fbeaece5fecef4c8abed4c7957e16e, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6625712810146728246, guid: c6fbeaece5fecef4c8abed4c7957e16e, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6625712810146728246, guid: c6fbeaece5fecef4c8abed4c7957e16e, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6625712810146728246, guid: c6fbeaece5fecef4c8abed4c7957e16e, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6625712810146728246, guid: c6fbeaece5fecef4c8abed4c7957e16e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6625712810146728246, guid: c6fbeaece5fecef4c8abed4c7957e16e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6625712810146728246, guid: c6fbeaece5fecef4c8abed4c7957e16e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: c6fbeaece5fecef4c8abed4c7957e16e, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -814,3 +890,4 @@ SceneRoots:
   - {fileID: 731373772}
   - {fileID: 1860349583}
   - {fileID: 892888822}
+  - {fileID: 2128351744}
