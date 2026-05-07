@@ -79,7 +79,7 @@ public class ColorChange : MonoBehaviour
         {
             if (isInvisible == false)
             {
-                print("You lose");
+                GameManager.Instance.GameOver();
             }
         }
     }
